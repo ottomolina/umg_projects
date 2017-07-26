@@ -1,0 +1,91 @@
+<html>
+<head>
+<title>Pagina con HTML + CSS + JavaScript</title>
+<style type="text/css">
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+#btnCalcular {
+	background-color: lightblue;
+	border-color: lightblue;
+}
+
+#btnCalcular:hover{
+	background-color: blue;
+	border-color: blue;
+}
+</style>
+</head>
+<body>
+
+	<ul>
+		<li><a href="#home">Inicio</a></li>
+		<li><a href="#about">Acerca de</a></li>
+	</ul>
+
+	<h1>Funcion Fibonacci</h1>
+
+	<p>Numero inicio <input type="number" id="txtNumInicio" />
+	<p>Repeticiones  <input type="number" id="txtNumRepeticion" />
+	<p><input type="button" id="btnCalcular" value="Calcular Sucesion" onclick="sucesionFibonacci()" />
+	
+	<div id="divResultado" />
+
+<script type="text/javascript">
+	function sucesionFibonacci(){
+		var inicio = document.getElementById('txtNumInicio').value;
+		var repeticion = document.getElementById('txtNumRepeticion').value;
+		var aux = 0;
+		var resultado = 0;
+		var mostrar = "";
+		
+		if(inicio == ''){
+			alert('No ha ingresado un numero inicial.');
+			return;
+		};
+		if(repeticion == ''){
+			alert('No ha ingresado el numero de repeticiones.');
+			return;
+		};
+		for(i = 1; i <= repeticion; i++){
+			var suma = parseInt(aux) + parseInt(inicio);
+			if(i == repeticion){
+				mostrar += suma.toString();
+			} else {
+				mostrar += suma.toString() + ', ';
+			}
+			aux = inicio;
+			inicio = suma;
+		}
+		document.getElementById('divResultado').innerHTML = 'Sucecion Fibonacci: ' + mostrar;
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
