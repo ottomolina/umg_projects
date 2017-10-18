@@ -1,0 +1,112 @@
+<?page title="Gestor Bodegas" contentType="text/html;charset=UTF-8"?>
+<!-- <?link rel="shortcut icon" type="image/x-icon" href="/img/icons/logo-agenda.ico"?> -->
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/bootstrap/themes/bootstrap-cerulean.min.css"?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/assets/css/docs.css" ?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/assets/css/pygments-manni.css" ?>
+<?script src="js.jquery.min.js" ?>
+<?script src="/bootstrap/v3/assets/js/html5shiv.js" if="${zk.ie < 9}" ?>
+<?script src="/bootstrap/v3/assets/js/respond.min.js" if="${zk.ie < 9}"?>
+<zk xmlns:h="native">
+<style src="css/menu.css" />
+<!-- <style src="/css/comp.css" /> -->
+	<window title="" border="none" width="100%" height="100%" id="wdwMenu" style="margin-top:1px" sclass="none"
+			apply="com.umg.gt.gestionbodega.controller.MenuCtrl">
+		<borderlayout width="100%" height="100%">
+			<center border="none" style="background: url('img/mant/defaultdesktop.png'); background-size:100% 100%;">
+				<tabbox id="tabPrincipal" height="100%">
+					<tabs style="background: transparent; height:36px;">
+						<tab id="tabInicio" label="Inicio" style="height:36px; border:none; background: rgba(255, 255, 255, 0.5);" />
+					</tabs>
+					<tabpanels>
+						<tabpanel height="100%">
+							<div width="100%" height="100%" align="center" id="dvInicio">
+								<hbox height="100%" pack="center">
+									<vbox height="100%" pack="center">
+										<menucard title="Inventario" id="mncInv" image="/img/menu/inventario-icon.png">
+											<attribute name="description">
+												Desde esta opción puede administrar el inventario de productos del almacén.
+											</attribute>
+										</menucard>
+										<menucard title="Producto" id="mncInfProduct" image="/img/menu/product_icon.png">
+											<attribute name="description">
+												Desde esta opción puede administrar la información de los productos del almacén.
+											</attribute>
+										</menucard>
+										<menucard title="Usuarios" id="mncConfUser" image="/img/menu/user_icon.png">
+											<attribute name="description">
+												Desde esta opción puede administrar la información de los usuarios.
+											</attribute>
+										</menucard>
+									</vbox>
+									<separator width="50px" height="100%" />
+									<vbox height="100%" pack="center">
+										<menucard title="Ordenes de Productos" id="mncOrd" image="/img/menu/orden_transaccion.png">
+											<attribute name="description">
+												Desde esta opción puede administrar las órdenes de entrada y salida de productos del almacén.
+											</attribute>
+										</menucard>
+										<menucard title="Almacenes" id="mncInfALmacen" image="/img/menu/almacen-icon.png">
+											<attribute name="description">
+												Desde esta opción puede administrar la información de los almacenes que existen en el sistema.
+											</attribute>
+										</menucard>
+<!-- 										<menucard title="Administración Usuarios" id="mncConfUserAdmin" image="/img/menu/configuration.png"> -->
+<!-- 											<attribute name="description"> -->
+<!-- 												Desde esta opción puede realizar la asignación de perfiles y permisos que tendrá cada usuario. -->
+<!-- 											</attribute> -->
+<!-- 										</menucard> -->
+										<menucard title="Cerrar Sesión" id="mncSalir" image="/img/menu/shutdown-icon.png">
+											<attribute name="description">
+												Cierra la sesión y sale del sistema.
+											</attribute>
+										</menucard>
+									</vbox>
+								</hbox>
+							</div>
+							<div width="100%" height="100%" align="center" id="dvInvMenu" visible="false">
+								<button id="btnRegresarInv" label="Regresar al inicio" />
+								<separator height="50px" />
+								<hbox height="100%" pack="center">
+									<menucard title="Inventario de Entrada" id="mncInvIn" image="/img/menu/inv_in.png">
+										<attribute name="description">
+											Desde esta opción puede administrar el inventario de entrada de productos al almacén.
+										</attribute>
+									</menucard>
+									<separator width="50px" height="100%" />
+									<menucard title="Inventario de Salida" id="mncInvOut" image="/img/menu/inv_out.png">
+										<attribute name="description">
+											Desde esta opción puede administrar el inventario de salida de productos del almacén.
+										</attribute>
+									</menucard>
+								</hbox>
+							</div>
+							<div width="100%" height="100%" align="center" id="dvOrdMenu" visible="false">
+								<button id="btnRegresarOrd" label="Regresar al inicio" />
+								<separator height="50px" />
+								<hbox height="100%" pack="center">
+									<menucard title="Ordenes de Entrada" id="mncOrdIn" image="/img/menu/trans_in.png">
+										<attribute name="description">
+											Desde esta opción puede administrar las órdenes de entrada de productos al almacén.
+										</attribute>
+									</menucard>
+									<separator width="50px" height="100%" />
+									<menucard title="Ordenes de Salida" id="mncOrdOut" image="/img/menu/trans_out.png">
+										<attribute name="description">
+											Desde esta opción puede administrar las órdenes de salida de productos del almacén.
+										</attribute>
+									</menucard>
+								</hbox>
+							</div>
+						</tabpanel>
+					</tabpanels>
+					
+				</tabbox>
+				
+			</center>
+		</borderlayout>
+	</window>
+	<script>
+		<![CDATA[
+		]]>
+	</script>
+</zk>

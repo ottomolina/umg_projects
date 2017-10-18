@@ -1,0 +1,121 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style src="/css/comp.css" />
+<!-- <style src="WebContent/bootstrap/v3/bootstrap/css/bootstrap.min.css"/> -->
+	<window title="" border="none" id="wdwProducto" width="100%" height="100%"
+			apply="com.umg.gt.gestionbodega.controller.ProductoCtrl">
+		<borderlayout width="100%" height="100%">
+			<north size="40px">
+				<toolbar>
+					<toolbarbutton id="btnAgregar" label="Agregar" sclass="btn-personalized" image="/img/icons/add.png" />
+					<toolbarbutton id="btnFiltro" label="Filtrar" sclass="btn-personalized" image="/img/icons/buscar.png" />
+					<toolbarbutton id="btnExportar" label="Exportar" sclass="btn-personalized" image="/img/icons/excel.png" />
+				</toolbar>
+			</north>
+			<center border="none" flex="true">
+				<listbox id="lbxInv" fixedLayout="true" checkmark="true" width="100%"  
+						 style="min-height:300px; max-height:99%; padding-top:2px;" mold="paging">
+					<listhead>
+						<listheader label="" width="35px" />
+						<listheader label="Código de Barra" width="150px" />
+						<listheader label="Nombre Producto" />
+						<listheader label="Descripción" />
+						<listheader label="Precio Unitario" width="150px" align="right" />
+						<listheader label="Usuario" width="200px" />
+						<listheader label="Fecha" width="150px" />
+					</listhead>
+				</listbox>
+			</center>
+		</borderlayout>
+	</window>
+	
+	<window id="wdwConfProducto" width="600px" visible="false" border="normal" title="Nuevo Registro" class="wdw">
+		<hbox width="100%" height="100%">
+			<vbox width="300px">
+				<grid>
+					<columns>
+						<column width="30%" />
+						<column width="70%" />
+					</columns>
+					<rows>
+						<row>
+							<label value="Código Barra" />
+							<textbox id="txtCodBarra" width="160px" maxlength="64" />
+						</row>
+						<row>
+							<label value="Nombre" />
+							<textbox id="txtNombre" width="160px" maxlength="256" />
+						</row>
+						<row>
+							<label value="Precio" />
+							<decimalbox id="decPrecio" width="160px" maxlength="11" locale="EN" />
+						</row>
+					</rows>
+				</grid>
+			</vbox>
+			<grid>
+				<columns>
+					<column width="30%" />
+					<column width="70%" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Descripción" />
+						<textbox id="txtDescripcion" rows="6" width="160px" tabindex="11" maxlength="512" style="resize:none" />
+					</row>
+				</rows>
+			</grid>
+		</hbox>
+		<div width="100%" align="center">
+			<toolbarbutton id="btnGuardar" label="Guardar" sclass="btn-personalized" image="/img/icons/guardar.png" />
+			<toolbarbutton id="btnRegresar" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwConfProducto.setVisible(false)" />
+		</div>
+	</window>
+	<window id="wdwFiltroProducto" width="500px" visible="false" border="normal" title="Filtrar" class="wdw">
+<!-- 		<div sclass="col-xs-12 modal-body"> -->
+<!-- 			<label value="Código de barra:" sclass="lbl lbl-primary"></label> -->
+<!-- 			<textbox id="txtCodBarra" sclass="form-control" maxlength="64"></textbox> -->
+<!-- 		</div> -->
+<!-- 		<div sclass="col-xs-12 modal-body"> -->
+<!-- 			<label value="Nombre:" sclass="lbl lbl-primary"></label> -->
+<!-- 			<textbox id="txtNombre" sclass="form-control" maxlength="256"></textbox> -->
+<!-- 		</div> -->
+<!-- 		<div sclass="col-xs-12 modal-body"> -->
+<!-- 			<label value="Precio:" sclass="lbl lbl-primary"></label> -->
+<!-- 			<decimalbox id="decPrecio" sclass="form-control" maxlength="11" locale="EN"></decimalbox> -->
+<!-- 		</div> -->
+<!-- 		<div sclass="col-xs-12 modal-footer text-center" align="center"> -->
+<!-- 			<div sclass="col-xs-3 col-xs-offset-5"> -->
+<!-- 				<toolbarbutton id="btnConsultar" label="Consultar" sclass="btn-personalized" image="/img/icons/buscar.png"/> -->
+<!-- 			</div> -->
+<!-- 			<div sclass="col-xs-3"> -->
+<!-- 				<toolbarbutton id="btnSalir" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwFiltroProducto.setVisible(false)" /> -->
+<!-- 			</div> -->
+<!-- 		</div> -->
+		
+		<grid>
+			<columns>
+				<column width="30%" />
+				<column width="70%" />
+			</columns>
+			<rows>
+				<row>
+					<label value="Código de barra:"></label>
+					<textbox id="txtCodBarra" maxlength="64" width="200px"></textbox>
+				</row>
+				<row>
+					<label value="Nombre:" ></label>
+					<textbox id="txtNombre" maxlength="256" width="200px"></textbox>
+				</row>
+				<row>
+					<label value="Precio:"></label>
+					<decimalbox id="decPrecio" maxlength="11" locale="EN" width="200px"></decimalbox>
+				</row>
+			</rows>
+		</grid>
+		<div width="100%" align="center">
+			<toolbarbutton id="btnConsultar" label="Consultar" sclass="btn-personalized" image="/img/icons/buscar.png"/>
+			<toolbarbutton id="btnSalir" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwFiltroProducto.setVisible(false)" />
+		</div>
+	</window>
+</zk>

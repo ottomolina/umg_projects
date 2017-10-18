@@ -1,0 +1,5 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="" border="normal" apply="com.umg.gt.gestionbodega.controller.AlmacenCtrl">
+</window>
+</zk>

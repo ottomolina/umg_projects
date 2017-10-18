@@ -1,0 +1,99 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style src="/css/comp.css" />
+	<window title="" border="none" width="100%" height="100%" id="wdwAlmacen"
+			apply="com.umg.gt.gestionbodega.controller.AlmacenCtrl">
+		<toolbar>
+			<toolbarbutton id="btnAgregar" label="Agregar" image="/img/icons/add.png" sclass="btn-personalized" />
+			<toolbarbutton id="btnFiltro" label="Filtrar" image="/img/icons/buscar.png" sclass="btn-personalized" />
+			<toolbarbutton id="btnExportar" label="Exportar" image="/img/icons/excel.png" sclass="btn-personalized" />
+		</toolbar>
+		<listbox id="lbxAlmacen" width="100%" vflex="1" checkmark="true" emptyMessage="No existen almacenes creados.">
+			<listhead>
+				<listheader label="" width="35px"	/>
+				<listheader label="Nombre Almacen"	/>
+				<listheader label="Descripción"		/>
+				<listheader label="Dirección"		/>
+				<listheader label="Fecha Creación"	/>
+			</listhead>
+		</listbox>
+	</window>
+	
+	<window id="wdwConfAlmacen" border="normal" width="600px" visible="false" sclass="wdw">
+		<toolbar>
+			<toolbarbutton id="btnGuardar" label="Guardar" sclass="btn-personalized" image="/img/icons/guardar.png" />
+			<toolbarbutton id="btnRegresar" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwConfAlmacen.setVisible(false)" />
+		</toolbar>
+		<hbox width="100%" height="100%">
+			<vbox width="300px">
+				<grid>
+					<columns>
+						<column width="30%" />
+						<column width="70%" />
+					</columns>
+					<rows>
+						<row>
+							<label value="Nombre" />
+							<textbox id="txtNombre" width="160px" maxlength="64" />
+						</row>
+						<row>
+							<label value="Dirección" />
+							<textbox id="txtDireccion" width="160px" maxlength="256" rows="3" tabindex="11" style="resize:none" />
+						</row>
+					</rows>
+				</grid>
+			</vbox>
+			<grid>
+				<columns>
+					<column width="30%" />
+					<column width="70%" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Descripción" />
+						<textbox id="txtDescripcion" rows="6" width="160px" tabindex="11" maxlength="512" style="resize:none" />
+					</row>
+				</rows>
+			</grid>
+		</hbox>
+	</window>
+	
+	<window id="wdwConfArea" border="normal" width="600px" visible="false" sclass="wdw">
+		<toolbar>
+			<toolbarbutton id="btnGuardar" label="Guardar" sclass="btn-personalized" image="/img/icons/guardar.png" />
+			<toolbarbutton id="btnRegresar" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwConfArea.setVisible(false)" />
+		</toolbar>
+		<hbox width="100%" height="100%">
+			<vbox width="300px">
+				<grid>
+					<columns>
+						<column width="30%" />
+						<column width="70%" />
+					</columns>
+					<rows>
+						<row>
+							<label value="Nombre" />
+							<textbox id="txtNombre" width="160px" maxlength="64" />
+						</row>
+						<row>
+							<label value="Tamaño" />
+							<textbox id="txtTamanio" width="160px" maxlength="32" />
+						</row>
+					</rows>
+				</grid>
+			</vbox>
+			<grid>
+				<columns>
+					<column width="30%" />
+					<column width="70%" />
+				</columns>
+				<rows>
+					<row>
+						<label value="Descripción" />
+						<textbox id="txtDescripcion" rows="3" width="160px" tabindex="5" maxlength="256" style="resize:none" />
+					</row>
+				</rows>
+			</grid>
+		</hbox>
+	</window>
+</zk>
