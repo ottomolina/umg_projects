@@ -1,0 +1,6 @@
+
+<?component name="textbox" 	 extends="textbox"   mold="rounded" width="150px" ?>
+<?component name="doublebox" extends="doublebox" mold="rounded" width="150px" ?>
+<?component name="combobox"  extends="combobox"  mold="rounded" width="150px" readonly="true" ?>
+<?component name="datebox"   extends="datebox"   mold="rounded" width="150px" readonly="true" ?>
+<zk/> 

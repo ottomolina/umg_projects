@@ -1,0 +1,22 @@
+<zk xmlns:html="http://www.w3.org/1999/xhtml">
+<vlayout hflex="1">
+<hlayout hflex="1">
+  <button id="help">Help</button>
+  <html:div>
+   <html:p>
+  	We will use the email address you provide to send you password
+    reminders, requests for ownership changes, and we may send you
+	announcements about the application.  We will not share your email address
+	with anyone.  We do not verify that you own the email address
+    you provide.
+    </html:p>
+    <html:ol>
+    <html:li>abc</html:li>
+    <html:li>abc</html:li>
+    <html:li>abc</html:li>
+    </html:ol>
+    <html:a href="http://google.com">Google</html:a>
+  </html:div>
+</hlayout>
+</vlayout>
+</zk>

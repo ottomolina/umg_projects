@@ -1,0 +1,111 @@
+
+html {
+    width: 100%;
+    height: 100%;
+    min-width: 900px;
+    min-height: 600px;
+}
+
+body {
+    background:#000 url(../img/fondo-3.jpg) center top;
+    background-size: 100% 100%;
+    min-width: 900px;
+    min-height: 600px;
+}
+
+.header {
+    text-align: center;
+    color: #ffffff;
+    background-image: url('../img/Header_New2.png');
+    background-size: 100% 100%;
+    height: 100px;
+    
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+.footer {
+    color: #ffffff;
+    /*background-image: url('../img/footer.png');*/
+    background-color: rgba(161,136,127 ,0.9);
+    background-size: 100% 100%;
+    font-size: 16pt;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100%;
+    min-width: 800px;
+    font-size: 14pt;
+    
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.container {
+    text-align: center;
+    height: 100%;
+    max-height: 100%;
+    color: #ffffff;
+    margin-top: 150px;
+}
+
+.tableData {
+    font-family: sans-serif;
+    border-collapse: collapse;
+    width: 500px;
+    height: 100%;
+}
+
+.tableData .fila:hover {
+    background-color: silver;
+}
+
+.modal-body {
+    text-align: center;
+    width: 100%;
+}
+
+.tableData td, .tableData th {
+    text-align: center;
+    padding: 8px;
+    width: 20%;
+    background-color: rgba(161,136,127 ,0.5);
+}
+
+.tableData th {
+    font-size: 16pt;
+    font-weight: bold;
+    background-color: rgba(161,136,127 ,0.8)
+}
+
+.tableData .fila:hover {
+    background-color: rgba(250,250,250 ,0.1);
+}
+
+.btnModificar, .btnEliminar {
+    cursor: pointer;
+    padding: 2px 5px;
+    color: #0099ff;
+}
+
+.btnModificar:hover, .btnEliminar:hover {
+    color: blue;
+    text-decoration: underline;
+}
+
+.modal-header, .modal-footer {
+    background-color: rgba(97,97,97,0.8);
+    color: white;
+}
+
+.modal-body {
+    background-color: rgba(224,224,224,1);
+}
+
+.modal-content {
+    /*color: rgba(26,35,126 ,1);*/
+    color: black;
+}

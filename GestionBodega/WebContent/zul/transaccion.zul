@@ -1,0 +1,98 @@
+<?page title="" contentType="text/html;charset=UTF-8"?>
+<zk>
+<style src="/css/comp.css" />
+	<window title="" border="none" width="100%" height="100%">
+		<toolbar>
+			<toolbarbutton id="btnNuevo" label="Agregar" sclass="btn-personalized" image="/img/icons/add.png" />
+			<toolbarbutton id="btnFiltro" label="Filtrar" sclass="btn-personalized" image="/img/icons/buscar.png" />
+			<toolbarbutton id="btnExportar" label="Exportar" sclass="btn-personalized" image="/img/icons/excel.png" />
+		</toolbar>
+		<listbox id="lbxTransaccion" width="100%" fixedLayout="true" hflex="min" vflex="min">
+			<listhead>
+				<listheader label="Correlativo" width="100px" />
+				<listheader label="Origen" width="300px" />
+				<listheader label="Destino" width="300px" />
+				<listheader label="Estado" width="200px" align="center" />
+				<listheader label="Fecha" width="200px" align="center" />
+				<listheader label="Usuario" width="150px" align="right" />
+			</listhead>
+		</listbox>
+	</window>
+	
+	<window id="wdwDetalleTransaccion" border="normal" width="600px" visible="false">
+		<toolbar>
+			<toolbarbutton label="Regresar" sclass="btn-personalized" image="/img/icons/regresar_16.png" />
+		</toolbar>
+		<listbox id="lbxDetalleInventario" width="100%" fixedLayout="true" hflex="min" vflex="min">
+			<listhead>
+				<listheader label="No." width="100px" />
+				<listheader label="Producto"  />
+				<listheader label="Cantidad" width="150px" align="center" />
+				<listheader label="Subtotal" width="100px" align="right" />
+			</listhead>
+			<listfoot>
+				<listfooter>
+					
+				</listfooter>
+			</listfoot>
+		</listbox>
+	</window>
+	
+	<window id="wdwConfTrans" border="normal" width="700px" height="400px" visible="false" sclass="wdw">
+		<toolbar>
+			<toolbarbutton id="btnGuardar" label="Guardar" sclass="btn-personalized" image="/img/icons/guardar.png" />
+			<toolbarbutton id="btnRegresar" label="Salir" sclass="btn-personalized" image="/img/icons/cierra.png" onClick="wdwConfTrans.setVisible(false)" />
+		</toolbar>
+		<borderlayout width="100%" height="100%">
+			<north size="64px">
+				<grid>
+					<rows>
+						<row>
+							<label value="Origen" />
+							<textbox id="txtOrigen" width="160px" maxlength="64" />
+							<label value="Destino" />
+							<textbox id="txtDestino" width="160px" maxlength="64" />
+						</row>
+						<row>
+							<label value="Estado" />
+							<combobox id="cmbEstado" width="160px" readonly="true">
+								<comboitem label="EN TRANSITO" value="EN TRANSITO" />
+								<comboitem label="ENTREGADO" value="ENTREGADO" />
+							</combobox>
+							<label value="Transacción" />
+							<combobox id="cmbTipoTrans" width="160px" readonly="true">
+								<comboitem label="ENTRADA" value="ENTRADA" />
+								<comboitem label="SALIDA" value="SALIDA" />
+							</combobox>
+						</row>
+					</rows>
+				</grid>
+			</north>
+			<west>
+				<grid>
+					<columns>
+						<column width="30%" />
+						<column width="70%" />
+					</columns>
+					<rows>
+						<row>
+							<label value="Producto" />
+							<bandbox id="bd" mold="rounded">  
+						        <bandpopup>
+						            <listbox height="250px" width="500px" mold="paging" autopaging="true"
+						                onSelect="bd.value=self.selectedItem.label; bd.close();">
+						                <listhead>
+						                    <listheader label="Producto" />
+						                    <listheader label="Existencia" />
+						                </listhead>
+						                <listitem label="${each}" forEach="${languages}" />
+						            </listbox>
+						        </bandpopup>
+						    </bandbox>
+						</row>
+					</rows>
+				</grid>
+			</west>
+		</hbox>
+	</window>
+</zk>

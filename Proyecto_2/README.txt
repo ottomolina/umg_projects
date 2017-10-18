@@ -1,0 +1,1 @@
+Para prueba local debe crear una base de datos llamada test y ejecutar el archivo Script para la creación de la tabla.

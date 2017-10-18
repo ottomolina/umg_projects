@@ -1,0 +1,131 @@
+<?page title="Gestor Bodegas" contentType="text/html;charset=UTF-8"?>
+<!-- <?link rel="shortcut icon" type="image/x-icon" href="/img/icons/logo-agenda.ico"?> -->
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/bootstrap/themes/bootstrap-cerulean.min.css"?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/assets/css/docs.css" ?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/assets/css/pygments-manni.css" ?>
+<?script src="js.jquery.min.js" ?>
+<?script src="js.menu.js" ?>
+<?script src="/bootstrap/v3/assets/js/html5shiv.js" if="${zk.ie < 9}" ?>
+<?script src="/bootstrap/v3/assets/js/respond.min.js" if="${zk.ie < 9}"?>
+<zk xmlns:w="client">
+<style src="css/menu.css" />
+	<window title="" border="none" width="100%" height="100%" id="wdwMenu"
+			apply="com.umg.gt.gestionbodega.controller.MenuCtrl">
+		<borderlayout width="100%" height="100%">
+			<north border="none" style="backgound-color: rgba(172,172,172,0.2);" size="50px">
+				<hbox width="100%" style="float:left">
+					<div sclass="header">
+						<image src="/img/mant/icono_bodega.png" width="50px" height="50px" />
+					</div>
+					<navbar orient="horizontal" style="margin-top:5px;">
+						<navitem id="navInicio" label="Inicio" width="180px" selected="true" />
+						<navitem id="navOrden" label="Ordenes de Trabajo" />
+						<navitem id="navInv" label="Control de Inventario" />
+						<navitem id="navInfo" label="Control de Información" />
+						<navitem id="navConf" label="Configuración" />
+					</navbar>
+				</hbox>
+			</north>
+			<center border="none" style="background: url('img/mant/defaultdesktop.png'); background-size:100% 100%; clear:left;">
+				<div width="100%" height="100%">
+				
+					<div id="dvInicio" sclass="menu_inicio" height="100%" width="0px"
+						 style="background: url('img/mant/transparent.png')">
+					
+					</div>
+					
+					<div id="dvOrden" sclass="menu_inv" height="0px" width="0px" visible="false">
+						<div align="center" width="100%">
+							<hbox>
+								<menucard title="Ordenes de Entrada" id="mncOrdIn" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar las órdenes de entrada de productos al almacén.
+									</attribute>
+								</menucard>
+								<separator width="50px" />
+								<menucard title="Ordenes de Salida" id="mncOrdOut" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar las órdenes de salida de productos del almacén.
+									</attribute>
+								</menucard>
+							</hbox>
+						</div>
+					</div>
+					
+					<div id="dvInv" sclass="menu_orden" height="0px" width="0px" visible="false">
+						<div align="center" width="100%">
+							<hbox>
+								<menucard title="Inventario de Entrada" id="mncInvIn" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar el inventario de entrada de productos al almacén.
+									</attribute>
+								</menucard>
+								<separator width="50px" />
+								<menucard title="Inventario de Salida" id="mncInvOut" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar el inventario de salida de productos del almacén.
+									</attribute>
+								</menucard>
+							</hbox>
+						</div>
+					</div>
+					
+					<div id="dvInfo" sclass="menu_info" height="0px" width="0px" visible="false">
+						<div align="center" width="100%">
+<!-- 							<hbox> -->
+<!-- 								<menucard title="Clientes" id="mncInfClient" image="/img/menu/configuration.png"> -->
+<!-- 									<attribute name="description"> -->
+<!-- 										Desde esta opción puede administrar la información de los clientes. -->
+<!-- 									</attribute> -->
+<!-- 								</menucard> -->
+<!-- 								<separator width="50px" /> -->
+<!-- 								<menucard title="Proveedores" id="mncInfProveetor" image="/img/menu/configuration.png"> -->
+<!-- 									<attribute name="description"> -->
+<!-- 										Desde esta opción puede administrar la información de los proveedores. -->
+<!-- 									</attribute> -->
+<!-- 								</menucard> -->
+<!-- 							</hbox> -->
+<!-- 							<separator height="50px" /> -->
+							<hbox>
+								<menucard title="Producto" id="mncInfProduct" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar la información de los productos del almacén.
+									</attribute>
+								</menucard>
+								<separator width="50px" />
+								<menucard title="Almacenes" id="mncInfALmacen" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar la información de los almacenes que existen en el sistema.
+									</attribute>
+								</menucard>
+							</hbox>
+						</div>
+					</div>
+					
+					<div id="dvConf" sclass="menu_conf" height="0px" width="0px" visible="false">
+						<div align="center" width="100%">
+							<hbox>
+								<menucard title="Usuarios" id="mncConfUser" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede administrar la información de los usuarios.
+									</attribute>
+								</menucard>
+								<separator width="50px" />
+								<menucard title="Administración Usuarios" id="mncConfUserAdmon" image="/img/menu/configuration.png">
+									<attribute name="description">
+										Desde esta opción puede realizar la asignación de perfiles y permisos que tendrá cada usuario.
+									</attribute>
+								</menucard>
+							</hbox>
+						</div>
+					</div>
+					
+				</div>
+			</center>
+		</borderlayout>
+	</window>
+	<script>
+		<![CDATA[
+		]]>
+	</script>
+</zk>

@@ -1,0 +1,22 @@
+<?page title="Gestor Almacenes" contentType="text/html;charset=UTF-8"?>
+<?link rel="stylesheet" type="text/css"	href="/bootstrap/v3/bootstrap/themes/bootstrap-cerulean.min.css"?>
+<zk xmlns:h="native">
+	<style src="css/menu.css" />
+	<style src="css/comp.css" />
+	<div apply="com.umg.gt.gestionbodega.controller.IndexCtrl" width="100%" height="95%">
+		<div width="100%" height="30px" style="background-color:black;">
+			<h:table width="100%">
+				<h:tr>
+					<h:td align="left" width="50%">
+						<label id="lblUsuario" style="color:white; font-size:12pt; font-weight:bold" />
+					</h:td>
+					<h:td align="right" width="50%">
+						<label id="lblFecha" style="color:white; font-size:12pt; font-weight:bold" />
+					</h:td>
+				</h:tr>
+			</h:table>
+		</div>
+		<include id="inc_menu" width="100%" height="100%" />
+<!-- 		<include id="inc_login" src="zul/login.zul" width="100%" height="100%" /> -->
+	</div>
+</zk>
